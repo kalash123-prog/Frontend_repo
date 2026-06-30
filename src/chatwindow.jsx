@@ -31,7 +31,7 @@ function Chatwindow() {
     setloading(true);
 
     try {
-      const response = await fetch("ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/chat", {
+      const response = await fetch("http://ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/chat", {
         method: "POST",
         credentials: "include", // Required to authenticate the request
         headers: {
