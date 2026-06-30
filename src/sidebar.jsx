@@ -17,7 +17,7 @@ function Sidebar() {
 
   const getallthreads = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/thread", {
+      const response = await fetch("ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/thread", {
         credentials: "include", // Required for logged-in user!
       });
       const data = await response.json();
@@ -43,7 +43,7 @@ function Sidebar() {
     const getMessages = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/thread/${currthreadid}`,
+          `ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/thread/${currthreadid}`,
           {
             credentials: "include", // Required for logged-in user!
           }
@@ -64,7 +64,7 @@ function Sidebar() {
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/thread/${threadId}`,
+        `ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/thread/${threadId}`,
         {
           method: "DELETE",
           credentials: "include", // Required for logged-in user!
@@ -94,7 +94,7 @@ function Sidebar() {
   };
 
   const updatehistory = async () => {
-    const response = await fetch("http://localhost:3000/api/thread", {
+    const response = await fetch("ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/thread", {
       credentials: "include", // Required for logged-in user!
     });
     const data = await response.json();

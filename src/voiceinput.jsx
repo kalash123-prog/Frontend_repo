@@ -44,7 +44,7 @@ function VoiceInput() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/voice/transcribe",
+        "ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/voice/transcribe",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

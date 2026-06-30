@@ -13,7 +13,7 @@ function ImageGen() {
 
  const generateImage = async () => {
  const response = await fetch(
-  "http://localhost:3000/api/generate-image",
+  "ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/generate-image",
   {
     method: "POST",
     headers: {
@@ -28,7 +28,7 @@ const data = await response.json();
 setImage(data.image.imageUrl);
 };
 useEffect(() => {
-  fetch("http://localhost:3000/api/images")
+  fetch("ec2-51-20-86-67.eu-north-1.compute.amazonaws.com:3000/api/images")
     .then(res => res.json())
     .then(data => setHistory(data));
 }, []);
